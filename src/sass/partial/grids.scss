@@ -1,0 +1,99 @@
+$gutter: (
+    mobile: calc(5px * 11),
+    desk: calc(20px * 11)
+);
+
+$total_columns: 12;
+$breakpoints: (
+    xs: 320px,
+    sm: 576px,
+    md: 768px,
+    lg: 992px,
+    xl: 1200px
+);
+$size_uni: calc(100 / 12);
+
+// container
+// =====================================================================================
+.container {
+    position: relative;
+    width: 100%;
+    max-width: 850px;
+
+
+    &-fluid {
+        @extend .container;
+        max-width: unset;
+    }
+
+    @each $label, $value in $breakpoints {
+        &-#{$label} {
+            @extend .container;
+            max-width: $value;
+        }
+    }
+}
+
+
+// row
+// =====================================================================================
+.row {
+    
+    display: inline-block;
+    width: 100%;
+    padding: 0 20px;
+
+    &-fluid &-small {
+        padding: 0 5px;
+    }
+
+    &-medium {
+        padding: 0 10px;
+    }
+
+    &-large {
+        padding: 0 20px;
+    }
+}
+
+
+
+
+// width in percent
+// =====================================================================================
+.w {
+    width: 100%;
+
+    @for $i from 1 through 100 {
+        &-#{$i} {
+            width: 0% + $i;
+        }
+    }
+}
+
+
+
+// col xs
+// =====================================================================================
+.col {
+    @for $i from 1 through 12 {
+        &-#{$i} {
+            width: 0% + calc($size_uni * $i);
+        }
+    }
+}
+
+
+// col witch breakpoints
+// =====================================================================================
+.col {
+    @each $label, $size in $breakpoints {
+        @media screen and (min-width: $size) {
+            @for $i from 1 through 12 {
+                &-#{$label}-#{$i} {
+                    width: 0% + calc($size_uni * $i) !important;
+                }
+            }
+        }
+    }
+}

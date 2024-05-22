@@ -1,0 +1,60 @@
+
+// LOGOS
+// =================================================================
+$logo_linkedin: '/assets/icons/logo-linkedin.svg';
+$logo_instagram: '/assets/icons/logo-instagram.svg';
+$logo_youtube: '/assets/icons/logo-youtube.svg';
+
+// UI
+// =================================================================
+$ui_menu_default: '/assets/icons/reorder-four-outline.svg';
+$ui_menu: '/assets/icons/ellipsis-vertical.svg';
+$ui_menu_circle: '/assets/icons/ellipsis-vertical-circle-outline.svg';
+$ui_close: '/assets/icons/close-outline.svg';
+$ui_check: '/assets/icons/checkmark-circle-outline.svg';
+
+.icon {
+    position: relative;
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    object-fit: cover;
+    background-size: cover;
+    opacity: 0.8;
+
+    &__social {
+        &--instagram {
+            background-image: url($logo_instagram);
+        }
+
+        &--linkedin {
+            background-image: url($logo_linkedin);
+        }
+
+        &--youtube {
+            background-image: url($logo_youtube);
+        }
+    }
+
+    &__ui {
+        &--menu {
+            background-image: url($ui_menu);
+        }
+
+        &--menu-default {
+            background-image: url($ui_menu_default);
+        }
+
+        &--menu-circle {
+            background-image: url($ui_menu_circle);
+        }
+
+        &--close {
+            background-image: url($ui_close);
+        }
+
+        &--check {
+            background-image: url($ui_check);
+        }
+    }
+}

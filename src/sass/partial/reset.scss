@@ -1,0 +1,57 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Open Sans", sans-serif;
+    font-optical-sizing: auto;
+}
+
+a,
+b,
+p,
+h1,
+h2,
+h3,
+h4 {
+    color: #202020;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+p {
+    text-align: justify;
+    font-size: 16px;
+    margin-bottom: 18px;
+}
+
+h1 {
+    font-size: 32px;
+    font-weight: 900;
+    margin-bottom: 16px;
+    line-height: 1;
+}
+
+h2 {
+    font-weight: 700;
+    margin-bottom: 24px;
+    line-height: 1;
+}
+
+h3 {
+    font-weight: 700;
+    margin-bottom: 18px;
+    line-height: 1;
+}
+
+section {
+    position: relative;
+}
+

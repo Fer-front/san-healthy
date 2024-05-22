@@ -1,0 +1,15 @@
+{
+  "name": "sanheatly",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "type": "module",
+  "scripts": {
+    "build": "node esbuild.config.js",
+    "cssbuild": "esbuild src/sass/style.scss --bundle --outfile=.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {  }
+}

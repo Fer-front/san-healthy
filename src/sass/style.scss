@@ -1,0 +1,225 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wdth,wght@0,75..100,300..800;1,75..100,300..800&display=swap');
+@import './partial/reset.scss' ,'./partial/spaces.scss' ,'./partial/icons.scss' ,'./partial/grids.scss' ,'./partial/flex.scss', './partial/helps.scss';
+
+
+.img_section {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 150px;
+    margin: 20px 0;
+}
+
+h1 {
+    font-size: 48px;
+    font-weight: 800;
+}
+
+h2 {
+    font-size: 32px;
+    font-weight: 700;
+}
+
+.san-healthy {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+
+
+    .img {
+        &-mascote {
+            position: relative;
+            background-image: url("/assets/imagens/san-healthy-mascote-mobile.png");
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: center;
+            width: 100%;
+            min-width: 200px;
+            min-height: 300px;
+            transform: scale(1.4);
+        }
+
+        &-margarida {
+
+        }
+
+        &-background-home {
+            position: relative;
+            width: 100%;
+            background-image: url('../../assets/imagens/bg-home-mobile.png');
+            background-repeat: no-repeat;
+            background-size: cover;
+            object-fit: cover;
+            padding-top: 60px;
+        }
+
+        &-quebra-cabeca {
+            @extend .img_section;
+        }
+
+        &-diabetes {
+            @extend .img_section;
+        }
+
+        &-thumb {
+            width: 25%;
+
+            &:hover {
+                margin: 0 auto;
+                transform: scale(1.3);
+                transition: 1s;
+            }
+
+            & a {
+                width: 100%;
+            }
+
+            & img {
+                width: 100%;
+            }
+        }
+
+    }
+
+    .san {
+        &__navbar {
+            position: fixed;
+            top: 0 !important;
+            width: 100%;
+
+            border-bottom: 1px solid #d7d7d7;
+            z-index: 10000;
+            padding: unset unset;
+
+            &__action {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                width: 100%;
+                padding: 10px 20px;
+                border-bottom: 1px solid #d8d8d8;
+                background-color: rgb(237, 240, 239);
+                z-index: 100px;
+
+                &-btn {
+                    &:hover,
+                    &:active {
+                        opacity: 1;
+                    }
+                }
+
+                img {
+                    width: 42px;
+                    opacity: 0.8;
+                }
+
+                .social-content {
+                    height: 24px;
+                }
+            }
+
+
+            &__links {
+                display: block;
+                position: absolute;
+                width: 100%;
+                flex-direction: column;
+                border-radius: 0 0 8px 8px;
+                background-color: rgba(219, 219, 219, 0.951);
+
+                padding: 20px;
+
+                z-index: 1;
+
+                &--hiden {
+                    display: none;
+                    transition: 2s;
+                }
+
+                li {
+                    width: 100%;
+                    margin-bottom: 5px;
+                    border-radius: 8px;
+                    padding: 10px;
+
+
+                    &:hover,
+                    &:active {
+                        background-color: rgba(200, 200, 200, 0.95);
+                    }
+                }
+            }
+        }
+
+        &__list-disk>li {
+            position: relative;
+            list-style: disc;
+            font-size: 14px;
+            font-weight: 300;
+        }
+    }
+
+    #home {
+        h1 {
+            font-size: 60px;
+        }
+        h2 {
+            font-size: 40px;
+        }
+    }
+
+    #produto {
+        .list > li {
+            list-style: circle;
+            font-size: 14px;
+            font-weight: 300;
+        }
+    }
+
+    #comprar {
+        a {
+            background-color: #159949;
+            color: white;
+            font-weight: 600;
+            border: none;
+            border-radius: 8px;
+            padding: 10px 30px;
+            cursor: pointer;
+
+            &:hover {
+                background-color: darken($color: #159949, $amount: 2);
+            }
+        }
+    }
+
+    #galeria {
+        background-color: #0E0E0E;
+
+        .desktop {
+            display: none;
+        }
+    }
+
+    footer {
+        text-align: center;
+        color: rgb(59, 59, 59);
+        background-color: #0E0E0E;
+    }
+}
+
+
+[id^="space"] {
+    width: 100%;
+    height: 50px;
+}
+
+section {
+    padding: unset;
+    padding-top: 25px;
+}
+
+body {
+    overflow-x: hidden;
+}
+

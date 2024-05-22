@@ -1,0 +1,7 @@
+/node_modules
+/icones-app
+
+/src/sass/*.css
+/src/sass/*.css.map
+/src/sass/partial/*.css
+/src/sass/partial/*.css.map

@@ -1,0 +1,121 @@
+
+$sizes: (
+    1: 8px,
+    2: 16px,
+    3: 28px,
+    4: 44px,
+    5: 62px
+);
+
+$directions: (
+    t: top,
+    r: right,
+    b: bottom,
+    l: left,
+);
+
+$breakpoints: (
+    xs: 320px,
+    sm: 576px,
+    md: 768px,
+    lg: 992px,
+    xl: 1200px
+);
+
+// MARGIN 
+// ==========================================================
+
+@each $size_label, $size_value in $sizes {
+    .m-#{$size_label} {
+        margin: $size_value;
+    }
+
+    .mx-#{$size_label} {
+        margin: 0 $size_value;
+    }
+
+    .my-#{$size_label} {
+        margin: $size_value 0;
+    }
+
+    @each $dir_label, $dir_value in $directions {
+        .m#{$dir_label}-#{$size_label} {
+            margin-#{$dir_value}: $size_value;
+        }
+    }
+}
+
+
+@each $label, $size in $breakpoints {
+    @media screen and (min-width: $size) {
+        @each $size_label, $size_value in $sizes {
+            .m-#{$label}-#{$size_label} {
+                margin: $size_value;
+            }
+        
+            .mx-#{$label}-#{$size_label} {
+                margin: 0 $size_value;
+            }
+        
+            .my-#{$label}-#{$size_label} {
+                margin: $size_value 0;
+            }
+        
+            @each $dir_label, $dir_value in $directions {
+                .m#{$dir_label}-#{$label}-#{$size_label} {
+                    margin-#{$dir_value}: $size_value;
+                }
+            }
+        }
+    }
+}
+
+
+// PADDING
+// ==========================================================
+
+@each $size_label, $size_value in $sizes {
+    .p-#{$size_label} {
+        padding: $size_value;
+    }
+
+    .px-#{$size_label} {
+        padding: 0 $size_value;
+    }
+
+    .py-#{$size_label} {
+        padding: $size_value 0;
+    }
+
+    @each $dir_label, $dir_value in $directions {
+        .p#{$dir_label}-#{$size_label} {
+            padding-#{$dir_value}: $size_value;
+        }
+    }
+
+}
+
+@each $label, $size in $breakpoints {
+    @media screen and (min-width: $size) {
+        @each $size_label, $size_value in $sizes {
+            .p-#{$label}-#{$size_label} {
+                padding: $size_value;
+            }
+        
+            .px-#{$label}-#{$size_label} {
+                padding: 0 $size_value;
+            }
+        
+            .py-#{$label}-#{$size_label} {
+                padding: $size_value 0;
+            }
+        
+            @each $dir_label, $dir_value in $directions {
+                .p#{$dir_label}-#{$label}-#{$size_label} {
+                    padding-#{$dir_value}: $size_value;
+                }
+            }
+        
+        }
+    }
+}
