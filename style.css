@@ -1417,28 +1417,28 @@ section {
   opacity: 0.8;
 }
 .icon__social--instagram {
-  background-image: url("/assets/icons/logo-instagram.svg");
+  background-image: url("assets/icons/logo-instagram.svg");
 }
 .icon__social--linkedin {
-  background-image: url("/assets/icons/logo-linkedin.svg");
+  background-image: url("assets/icons/logo-linkedin.svg");
 }
 .icon__social--youtube {
-  background-image: url("/assets/icons/logo-youtube.svg");
+  background-image: url("assets/icons/logo-youtube.svg");
 }
 .icon__ui--menu {
-  background-image: url("/assets/icons/ellipsis-vertical.svg");
+  background-image: url("assets/icons/ellipsis-vertical.svg");
 }
 .icon__ui--menu-default {
-  background-image: url("/assets/icons/reorder-four-outline.svg");
+  background-image: url("assets/icons/reorder-four-outline.svg");
 }
 .icon__ui--menu-circle {
-  background-image: url("/assets/icons/ellipsis-vertical-circle-outline.svg");
+  background-image: url("assets/icons/ellipsis-vertical-circle-outline.svg");
 }
 .icon__ui--close {
-  background-image: url("/assets/icons/close-outline.svg");
+  background-image: url("assets/icons/close-outline.svg");
 }
 .icon__ui--check {
-  background-image: url("/assets/icons/checkmark-circle-outline.svg");
+  background-image: url("assets/icons/checkmark-circle-outline.svg");
 }
 
 .container, .container-xl, .container-lg, .container-md, .container-sm, .container-xs, .container-fluid {
@@ -2190,7 +2190,7 @@ h2 {
 }
 .san-healthy .img-mascote {
   position: relative;
-  background-image: url("/assets/imagens/san-healthy-mascote-mobile.png");
+  background-image: url("assets/imagens/san-healthy-mascote-mobile.png");
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
@@ -2202,7 +2202,7 @@ h2 {
 .san-healthy .img-background-home {
   position: relative;
   width: 100%;
-  background-image: url("../../assets/imagens/bg-home-mobile.png");
+  background-image: url("assets/imagens/bg-home-mobile.png");
   background-repeat: no-repeat;
   background-size: cover;
   -o-object-fit: cover;
