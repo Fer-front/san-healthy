@@ -32,11 +32,13 @@ $breakpoints: (
     }
 
     .mx-#{$size_label} {
-        margin: 0 $size_value;
+        margin-left: $size_value;
+        margin-right: $size_value;
     }
 
     .my-#{$size_label} {
-        margin: $size_value 0;
+        margin-top: $size_value;
+        margin-bottom: $size_value;
     }
 
     @each $dir_label, $dir_value in $directions {
@@ -55,11 +57,13 @@ $breakpoints: (
             }
         
             .mx-#{$label}-#{$size_label} {
-                margin: 0 $size_value;
+                margin-left: $size_value;
+                margin-right: $size_value;
             }
         
             .my-#{$label}-#{$size_label} {
-                margin: $size_value 0;
+                margin-top: $size_value;
+                margin-bottom: $size_value;
             }
         
             @each $dir_label, $dir_value in $directions {
@@ -81,11 +85,13 @@ $breakpoints: (
     }
 
     .px-#{$size_label} {
-        padding: 0 $size_value;
+        padding-left: $size_value;
+        padding-right: $size_value;
     }
 
     .py-#{$size_label} {
-        padding: $size_value 0;
+        padding-top: $size_value;
+        padding-bottom: $size_value;
     }
 
     @each $dir_label, $dir_value in $directions {
@@ -104,11 +110,13 @@ $breakpoints: (
             }
         
             .px-#{$label}-#{$size_label} {
-                padding: 0 $size_value;
+                padding-left: $size_value;
+                padding-right: $size_value;
             }
         
             .py-#{$label}-#{$size_label} {
-                padding: $size_value 0;
+                padding-top: $size_value;
+                padding-bottom: $size_value;
             }
         
             @each $dir_label, $dir_value in $directions {
