@@ -1,0 +1,31 @@
+
+// font
+// ===================================================================
+$font-size: (
+    1:12px,
+    2:16px,
+    3:24px,
+    4:32px,
+    5:44px,
+    6:64px
+);
+
+$font-weight: (
+    1: 300,
+    2: 400,
+    3: 600,
+    4: 800,
+    5: bold
+);
+
+@each $label, $value in $font-weight {
+    .fw-#{$label} {
+        font-weight: $value;
+    }
+}
+
+@each $label, $value in $font-size {
+    .fs-#{$label} {
+        font-size: $value;
+    }
+}

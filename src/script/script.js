@@ -30,3 +30,6 @@ linksItems.forEach((link) => {
         el.scrollIntoView({ behavior: "smooth", block: "start", inline: "start" });
     })
 })
+
+
+

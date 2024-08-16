@@ -1,3 +1,137 @@
+$breakpoints: (
+    xs: 320px,
+    sm: 576px,
+    md: 768px,
+    lg: 992px,
+    xl: 1200px
+);
+
+$breakpoints-only: (
+    xs: (min:320px, max:575px),
+    sm: (min:576px, max:767px),
+    md: (min:768px, max:991px),
+    lg: (min:992px, max:1199px),
+    xl: (min:1200px, max:2400px)
+);
+
+
+@each $label, $value in $breakpoints {
+    @media screen and (min-width: $value) {
+        .justify-content {
+            &-center-#{$label} {
+                justify-content: center !important;
+            }
+
+            &-start-#{$label} {
+                justify-content: start !important;
+            }
+
+            &-end-#{$label} {
+                justify-content: end !important;
+            }
+        }
+
+        .align-items {
+            &-center-#{$label} {
+                align-items: center !important;
+            }
+
+            &-start-#{$label} {
+                align-items: start !important;
+            }
+
+            &-end-#{$label} {
+                align-items: end !important;
+            }
+        }
+
+        .flex {
+            &-row-#{$label} {
+                flex-direction: row !important;
+            }
+
+            &-row-reverse-#{$label} {
+                flex-direction: row-reverse !important;
+            }
+
+            &-col-#{$label} {
+                flex-direction: column !important;
+            }
+
+            &-col-reverse-#{$label} {
+                flex-direction: column-reverse !important;
+            }
+
+            &-wrap-#{$label} {
+                flex-wrap: wrap !important;
+            }
+
+            &-nowrap-#{$label} {
+                flex-wrap: nowrap !important;
+            }
+        }
+    }
+}
+
+@each $label, $value in $breakpoints-only {
+    @media screen and (min-width: map-get($value, "min")) and (max-width: map-get($value, "max")) {
+        .justify-content {
+            &-center-#{$label}-only {
+                justify-content: center !important;
+            }
+
+            &-start-#{$label}-only {
+                justify-content: start !important;
+            }
+
+            &-end-#{$label}-only {
+                justify-content: end !important;
+            }
+        }
+
+        .align-items {
+            &-center-#{$label}-only {
+                align-items: center !important;
+            }
+
+            &-start-#{$label}-only {
+                align-items: start !important;
+            }
+
+            &-end-#{$label}-only {
+                align-items: end !important;
+            }
+        }
+
+        .flex {
+            &-row-#{$label}-only {
+                flex-direction: row !important;
+            }
+
+            &-row-reverse-#{$label}-only {
+                flex-direction: row-reverse !important;
+            }
+
+            &-col-#{$label}-only {
+                flex-direction: column !important;
+            }
+
+            &-col-reverse-#{$label}-only {
+                flex-direction: column-reverse !important;
+            }
+
+            &-wrap-#{$label}-only {
+                flex-wrap: wrap !important;
+            }
+
+            &-nowrap-#{$label}-only {
+                flex-wrap: nowrap !important;
+            }
+        }
+    }
+}
+
+
 .d-flex {
     display: flex;
     flex-direction: row;

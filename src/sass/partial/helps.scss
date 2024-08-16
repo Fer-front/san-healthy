@@ -56,3 +56,17 @@ $breakpoints-only: (
         }
     }
 }
+
+.radius {
+    &-full {
+        border-radius: 100%;
+    }
+
+    &-1 {
+        border-radius: 4px;
+    }
+
+    &-2 {
+        border-radius: 8px;
+    }
+}

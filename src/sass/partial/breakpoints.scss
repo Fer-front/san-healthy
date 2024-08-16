@@ -1,0 +1,34 @@
+@use "sass:map";
+
+$breakpoints: (
+    xs: 320px,
+    sm: 576px,
+    md: 768px,
+    lg: 992px,
+    xl: 1200px
+);
+
+$breakpoints-only: (
+    xs: (min:320px, max:575px),
+    sm: (min:576px, max:767px),
+    md: (min:768px, max:991px),
+    lg: (min:992px, max:1199px),
+    xl: (min:1200px, max:2400px)
+);
+
+
+// mobile first
+// ------------------------------------------------------------------------------------
+@mixin media($device) {
+    @media screen and (min-width: map-get($breakpoints, $device)) {
+        @content;
+    }
+}
+
+// media only
+// ------------------------------------------------------------------------------------
+@mixin media-only($device) {
+    @media screen and (min-width: map-get($breakpoints-only, $device, "min")) and (max-width: map-get($breakpoints-only, $device, "max")) {
+        @content;
+    }
+}

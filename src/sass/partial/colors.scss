@@ -1,0 +1,28 @@
+
+// colors
+// ===================================================================
+$colors: (
+    p1: #0F705E,
+    p2: #63817B,
+    p3: #BBD2CE,
+    p4: #E7F1EF,
+    light: #ffffff,
+    'gray': #E3E3E3,
+    dark: #272626,
+    darkness: #131313,
+);
+
+
+// background
+// ===================================================================
+
+@each $label_color, $value in $colors {
+    .bg-#{$label_color} {
+        background-color: $value;
+    }
+
+    .color-#{$label_color} {
+        color: $value;
+    }
+}
+

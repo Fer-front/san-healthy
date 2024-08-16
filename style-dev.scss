@@ -1,5 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wdth,wght@0,75..100,300..800;1,75..100,300..800&display=swap');
-@import './partial/reset.scss' ,'./partial/spaces.scss' ,'./partial/icons.scss' ,'./partial/grids.scss' ,'./partial/flex.scss', './partial/helps.scss';
+@import './src/sass/partial/reset.scss',
+'./src/sass/partial/spaces.scss',
+'./src/sass/partial/icons.scss',
+'./src/sass/partial/grids.scss',
+'./src/sass/partial/flex.scss',
+'./src/sass/partial/helps.scss',
+'./src/sass/partial/font.scss',
+'./src/sass/partial/colors.scss',
+'./src/sass/partial/breakpoints.scss';
 
 
 .img_section {
@@ -26,7 +34,6 @@ h2 {
     align-items: center;
     position: relative;
 
-
     .img {
         &-mascote {
             position: relative;
@@ -38,10 +45,6 @@ h2 {
             min-width: 200px;
             min-height: 300px;
             transform: scale(1.4);
-        }
-
-        &-margarida {
-
         }
 
         &-background-home {
@@ -103,6 +106,7 @@ h2 {
                 z-index: 100px;
 
                 &-btn {
+
                     &:hover,
                     &:active {
                         opacity: 1;
@@ -164,13 +168,14 @@ h2 {
         h1 {
             font-size: 60px;
         }
+
         h2 {
-            font-size: 40px;
+            font-size: 35px;
         }
     }
 
     #produto {
-        .list > li {
+        .list>li {
             list-style: circle;
             font-size: 14px;
             font-weight: 300;
@@ -201,6 +206,33 @@ h2 {
         }
     }
 
+    #artistas {
+        .card {
+            min-width: 300px;
+            margin-right: 15px;
+        }
+
+    }
+
+
+    #disclame {
+        .img {
+            position: relative;
+
+            > img {
+                width: 100%;
+                max-width: 340px;
+            }
+        }
+
+        .faixa {
+            position: relative;
+            top: 0;
+            transform: translateY(-50%);
+            scale: 1.04;
+        }
+    }
+
     footer {
         text-align: center;
         color: rgb(59, 59, 59);
@@ -221,5 +253,18 @@ section {
 
 body {
     overflow-x: hidden;
+}
+
+@include media('md') {
+    #disclame {
+        .img {
+            position: absolute !important;
+            width: 100%;
+            top: 45%;
+            left: 60%;
+            transform: translateY(-50%);
+            z-index: 10;
+        }
+    }
 }
 
